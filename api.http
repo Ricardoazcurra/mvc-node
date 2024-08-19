@@ -1,0 +1,44 @@
+##Get todas las movies
+
+GET http://localhost:1234/movies
+
+###GET una movie
+
+GET  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###GET Obtener todas las movies por genero
+
+GET  http://localhost:1234/movies?genre=Drama
+
+
+###POST Almacenar movie
+
+POST http://localhost:1234/movies
+content-type: application/json
+
+{
+    "title": "Titanic",
+    "year": 1997,
+    "director": "James Cameron",
+    "duration": 195,
+    "poster": "https://i.pinimg.com/originals/42/42/65/4242658e6f1b0d6322a4a93e0383108b.png",
+    "genre": [
+      "Drama",
+      "Romance"
+    ],
+    "rate":9.5
+}
+
+###Actualizar la pelicula
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+content-type: application/json
+
+{
+  "year": 1995
+
+}
+
+###Eliminar movie
+
+DELETE http://localhost:1234/movies/aa391090-b938-42eb-b520-86ea0aa3917b
+content-type: application/json 
