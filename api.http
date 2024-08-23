@@ -4,7 +4,7 @@ GET http://localhost:1234/movies
 
 ###GET una movie
 
-GET  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET  http://localhost:1234/movies/8c820c34-5f4b-11ef-95c4-c4e984dd9cb2
 
 ###GET Obtener todas las movies por genero
 
@@ -17,7 +17,8 @@ POST http://localhost:1234/movies
 content-type: application/json
 
 {
-    "title": "Titanic",
+    "sql":"Select * from movies",
+    "title": "Spiderman",
     "year": 1997,
     "director": "James Cameron",
     "duration": 195,
@@ -30,15 +31,18 @@ content-type: application/json
 }
 
 ###Actualizar la pelicula
-PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH http://localhost:1234/movies/8c820c34-5f4b-11ef-95c4-c4e984dd9cb2
 content-type: application/json
 
 {
-  "year": 1995
-
+  "title": "Spiderman II",
+  "year": 1998,
+  "director": "James Cameron",
+  "duration": 200,
+  "poster": "https://i.pinimg.com/originals/42/42/65/4242658e6f1b0d6322a4a93e0383108b.png",
+  "rate": 9.5
 }
 
 ###Eliminar movie
-
-DELETE http://localhost:1234/movies/aa391090-b938-42eb-b520-86ea0aa3917b
+DELETE http://localhost:1234/movies/6e35570a-5f4b-11ef-95c4-c4e984dd9cb2
 content-type: application/json 
